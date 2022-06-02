@@ -32,6 +32,7 @@ public class WebSecurityConfig{
                 .authorizeExchange()
                 .pathMatchers(HttpMethod.POST,"/users/login").permitAll()
                 .pathMatchers(HttpMethod.POST,"/users/create").permitAll()
+                .pathMatchers(HttpMethod.GET,"/users/id").permitAll()
                 .anyExchange().authenticated()
                 .and()
                 .httpBasic()
